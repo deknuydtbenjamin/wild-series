@@ -1,7 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 
-import style from "../pages/programs.module.css";
 import type { ProgramType } from "../lib/definitions";
+import style from "../pages/programs.module.css";
 
 export default function Programs() {
   const data = useLoaderData() as ProgramType[];
