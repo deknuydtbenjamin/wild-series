@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+.title {
+  font-size: 5em;
+  color: rgb(255, 0, 0);
+  text-align: center;
+}
+.card {
+  display: flex;
+  margin: 1em;
+  justify-content: space-around;
+}
+.contenaire {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
