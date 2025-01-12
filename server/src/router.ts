@@ -25,8 +25,11 @@ router.get("/", sayActions.sayWelcome);
 
 import programActions from "./modules/program/programAction";
 
-router.get("/api/programs", programActions.browse);
-router.get("/api/programs/:id", programActions.read);
+router.get("/api/program", programActions.browse);
+router.get("/api/program/:id", programActions.read);
+router.put("/api/program/:id/", programActions.validate, programActions.edit);
+router.post("/api/program", programActions.validate, programActions.add);
+router.delete("/api/program/:id", programActions.destroy);
 
 /* ************************************************************************* */
 
@@ -34,5 +37,12 @@ import categoryActions from "./modules/category/categoryActions";
 
 router.get("/api/categories", categoryActions.browse);
 router.get("/api/categories/:id", categoryActions.read);
+router.put(
+  "/api/categories/:id",
+  categoryActions.validate,
+  categoryActions.edit,
+);
+router.post("/api/categories", categoryActions.validate, categoryActions.add);
+router.delete("/api/categories/:id", categoryActions.destroy);
 
 export default router;

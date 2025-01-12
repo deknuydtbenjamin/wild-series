@@ -5,6 +5,7 @@ import style from "../pages/programs.module.css";
 
 export default function Programs() {
   const data = useLoaderData() as ProgramType[];
+
   return (
     <div>
       <h1 className={style.title}> Programmes</h1>

@@ -11,3 +11,19 @@ body {
   color: #eee;
   margin: 0;
 }
+.header {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.lien {
+  display: flex;
+  list-style: none;
+  gap: 2em;
+}
+.list {
+  color: white;
+  text-decoration: none;
+}

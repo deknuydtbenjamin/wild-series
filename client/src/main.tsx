@@ -1,13 +1,12 @@
 // Import necessary modules from React and React Router
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./Router";
 
 /* ************************************************************************* */
 
 // Import the main app component
-import App from "./App";
-import Programs from "./pages/Programs";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -16,21 +15,10 @@ import Programs from "./pages/Programs";
 // import Contact from "./pages/Contact";
 
 /* ************************************************************************* */
-const API_URL = import.meta.env.VITE_API_URL;
+
 // Create router configuration with routes
 // You can add more routes as you build out your app!
-const router = createBrowserRouter([
-  {
-    path: "/", // The root path
-    element: <App />, // Renders the App component for the home page
-  },
-  {
-    path: "/programs",
-    element: <Programs />,
-    loader: () => fetch(`${API_URL}/api/programs`),
-  },
-  // Try adding a new route! For example, "/about" with an About component
-]);
+// Try adding a new route! For example, "/about" with an About component
 
 /* ************************************************************************* */
 

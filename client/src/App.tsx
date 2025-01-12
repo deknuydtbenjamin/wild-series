@@ -1,18 +1,36 @@
 import "./App.css";
+import { NavLink, Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <footer>
-      Développé par la&nbsp;
-      <a
-        href="https://www.wildcodeschool.com/"
-        className="wcs"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Wild Code School
-      </a>
-    </footer>
+    <section className="header">
+      <h1>
+        <NavLink to="/" className="list">
+          {" "}
+          Wild Serie{" "}
+        </NavLink>
+      </h1>
+      <div>
+        <nav className="navbar">
+          <ul className="lien">
+            <li>
+              <NavLink to="/categories" className="list">
+                Catégories
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/programs" className="list">
+                Séries
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <main className="text-box">
+        <Outlet />
+      </main>
+    </section>
   );
 }
 
